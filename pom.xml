@@ -5,6 +5,7 @@
     <modules>
         <module>user-service</module>
         <module>eureka-server</module>
+        <module>order-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -12,7 +13,7 @@
         <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>som.cloud.make</groupId>
+    <groupId>som.cloud.make.well</groupId>
     <artifactId>make-cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>make-cloud</name>
