@@ -22,6 +22,8 @@
     <properties>
         <java.version>1.8</java.version>
         <spring.cloud-version>2021.0.0</spring.cloud-version>
+        <mysql.version>8.0.27</mysql.version>
+        <mybatis.version>2.2.0</mybatis.version>
     </properties>
 
     <dependencyManagement>
@@ -33,6 +35,20 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
