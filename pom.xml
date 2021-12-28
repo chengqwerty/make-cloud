@@ -23,6 +23,7 @@
     <properties>
         <java.version>1.8</java.version>
         <spring.cloud-version>2021.0.0</spring.cloud-version>
+        <spring.cloud.alibaba-version>2.2.6.RELEASE</spring.cloud.alibaba-version>
         <mysql.version>8.0.27</mysql.version>
         <mybatis.version>2.2.0</mybatis.version>
     </properties>
@@ -40,6 +41,14 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring.cloud-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
