@@ -6,12 +6,15 @@ import org.springframework.web.client.RestTemplate;
 import som.cloud.make.well.order.web.data.dao.OrderDao;
 import som.cloud.make.well.order.web.data.pojo.Order;
 import som.cloud.make.well.order.web.data.pojo.User;
+import som.cloud.make.well.order.web.order.feign.UserServiceFeign;
 
 @Service
 public class OrderService {
 
     private OrderDao orderDao;
     private RestTemplate restTemplate;
+
+    private UserServiceFeign userServiceFeign;
 
     @Autowired
     public void setOrderDao(OrderDao orderDao) {
@@ -23,11 +26,14 @@ public class OrderService {
         this.restTemplate = restTemplate;
     }
 
+    @Autowired
+    public void setUserServiceFeign(UserServiceFeign userServiceFeign) {
+        this.userServiceFeign = userServiceFeign;
+    }
+
     public Order queryOrderById(Long orderId) {
         Order order = orderDao.findById(orderId);
-        String url = "http://user-service/user/" + order.getUserId();
-        User user = restTemplate.getForObject(url, User.class);
-        order.setUser(user);
+        order.setUser(userServiceFeign.findById(order.getUserId()));
         return order;
     }
 

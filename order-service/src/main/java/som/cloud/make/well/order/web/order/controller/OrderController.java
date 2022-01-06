@@ -20,7 +20,7 @@ public class OrderController {
     }
 
     @GetMapping("/{orderId}")
-    public Order queryOrderByUserId(@PathVariable("orderId") Long orderId) {
+    public Order queryOrderById(@PathVariable("orderId") Long orderId) {
         return orderService.queryOrderById(orderId);
     }
 
