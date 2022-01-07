@@ -1,5 +1,7 @@
 package som.cloud.make.well.order.web.data.pojo;
 
+import som.cloud.make.well.user.feign.pojo.User;
+
 public class Order {
 
     private Long id;

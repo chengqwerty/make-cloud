@@ -46,6 +46,12 @@
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-httpclient</artifactId>
         </dependency>
+        <!-- user-service-feign module依赖 -->
+        <dependency>
+            <groupId>som.cloud.make.well</groupId>
+            <artifactId>user-service-feign</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

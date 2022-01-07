@@ -5,8 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import som.cloud.make.well.order.web.data.dao.OrderDao;
 import som.cloud.make.well.order.web.data.pojo.Order;
-import som.cloud.make.well.order.web.data.pojo.User;
-import som.cloud.make.well.order.web.order.feign.UserServiceFeign;
+import som.cloud.make.well.user.feign.client.UserServiceFeign;
 
 @Service
 public class OrderService {

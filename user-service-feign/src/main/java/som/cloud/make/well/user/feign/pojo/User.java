@@ -1,4 +1,4 @@
-package som.cloud.make.well.order.web.data.pojo;
+package som.cloud.make.well.user.feign.pojo;
 
 public class User {
 
